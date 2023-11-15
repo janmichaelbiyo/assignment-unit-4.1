@@ -83,13 +83,14 @@ function find(value, array1) {
   for (let x in array1){
     if (value === array1[x]){
      return true; 
-  } {
-    return false;
-  }
+  } 
 }
 }
+{
+  return false;
 }
-console.log(find(1, [1,3,5,7]));
+}
+console.log(find(8, [1,3,5,7]));
 
 // ----------------------
 // Stretch Goals
