@@ -15,17 +15,18 @@ console.log('Test - should say "Hello World!"', hello());
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
 
-//const name = 'jan michael';
-function helloName(name) {
-  
-  return 'Hello, Your Name!';
 
+function helloName(name) {
+
+  //return 'hello' + " " + name;
+    return 'Hello, Your Name!'
 }
 
 
 // Remember to call the function to test
 
-console.log(helloName());
+//console.log(helloName('Your Name!'));
+//console.log(helloName('hello, Jan Michael'));
 
 
 // 3. Function to add two numbers together & return the result
@@ -35,8 +36,8 @@ function addNumbers(firstNumber,secondNumber) {
   return firstNumber + secondNumber;
 }
 
-console.log (addNumbers(2,3));
-console.log(addNumbers(87,-65));
+console.log('this should be 5 =', addNumbers(2,3));
+console.log('test this should equal 22 =', addNumbers(87,-65));
 
 // 4. Function to multiply three numbers & return the result
 function multiplyThree(num1, num2, num3) { 
@@ -44,8 +45,8 @@ function multiplyThree(num1, num2, num3) {
 
 }
 
-console.log(multiplyThree(3,6,9));
-console.log(multiplyThree(54,89,67));
+console.log('test should be 162 = ',multiplyThree(3,6,9));
+console.log('test should be 322002 = ',multiplyThree(54,89,67));
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
@@ -106,25 +107,58 @@ console.log(find(8, [1,3,5,7]));
 // ----------------------
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
-function isFirstLetter(letter, string) {
 
+function isFirstLetter(letter, string) {
+    
+    if (letter === string[0]){
+        return true;
+    } else {
+        return false;
+    }
 }
+
+console.log(isFirstLetter("a","angie"));
+
 
 
 // 9. Function to return the sum of all numbers in an array
+
+//array =[2,3,4,5,8];
+
 function sumAll(array) {
   let sum = 0;
   // TODO: loop to add items
-
+  for (let i =0; i<array.length; i++) {
+          sum += array[i];
+  }
+    
   // TODO: return the sum
+  return sum;
+
 }
+
+console.log(sumAll(array));
+
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
-function allPositive() {
 
-}
+
+function allPositive(array) {
+  const inputArray = [];
+  for (let i=0; i < array.length; i++){
+    if (array[i]>0){
+       inputArray.push(array[i]);
+    }
+   
+  }{return inputArray}
+
+  }
+  
+  allPositive(array);
+  console.log(allPositive(array));
+
 
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
